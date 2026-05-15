@@ -60,6 +60,7 @@ close1.addEventListener("click",()=>{
 window.addEventListener("resize",()=>{
 
 
+
     if(innerWidth>1050){
          close1.style.display="none"     
          toggle.style.display="none"
@@ -73,3 +74,58 @@ window.addEventListener("resize",()=>{
 
     }
 })
+
+
+// hero section
+
+let heroimg=document.querySelector(".hero-section")
+let image=["./src/cam.png","./src/cam2.png","./src/home.webp"]
+let index=0
+let contents=document.querySelectorAll(".hero-content")
+
+setInterval(()=>{
+    index++
+    if(index>=image.length){
+        index=0
+    }
+    
+    heroimg.style.backgroundImage=`url(${image[index]})`
+
+    // contents.forEach((items)=>{
+    //     items.classList.remove("active")
+    // })
+    //     contents[index]=classList.add("active")
+        contents.forEach((item)=>{
+
+        item.classList.remove("active");
+    });
+
+
+    contents[index].classList.add("active");
+
+},3000)
+
+
+
+let leftArrow=document.querySelector(".leftArrow")
+
+leftArrow.addEventListener("click",()=>{
+    index++
+    if(index>=image.length){
+        index=0
+    }
+    heroimg.style.backgroundImage=`url(${image[index]})`
+})
+
+
+let rightArrow=document.querySelector(".rightArrow")
+rightArrow.addEventListener("click",()=>{
+
+     index--
+    if(index<0){
+        index=image.length-1
+    }
+    heroimg.style.backgroundImage=`url(${image[index]})`
+
+})
+
