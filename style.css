@@ -117,13 +117,13 @@ nav a:hover{
     }
 
     nav{
-        display: flex;
+        display: none;
          position: absolute;
          flex-direction: column;
          color: black;
          top: 0;
          left: 0;
-         padding: 20px 50px;
+         padding: 20px 20px;
          background: yellowgreen;
          width: 75%;
          height: 100vh;
@@ -200,6 +200,10 @@ nav a:hover{
  .contactbox a:first-child{
      display: flex;
         justify-content: space-between;
+ }
+
+  .page-wrap{
+        padding-bottom: 0px;
  }
 
 
