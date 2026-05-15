@@ -5,28 +5,39 @@
     font-family: "Noto Sans", sans-serif;
 }
 
-header{
+#header{
     position: fixed;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 20px 50px;
+    padding: 10px 0px;
     background: rgba(0, 0, 0, 0.493);
     width: 100%;
+}
+
+#header img{
+    width: clamp(150px,16vw,180px);
 }
 
 nav{
     display: flex;
     gap: 50px;
- 
 }
 
 nav a{
     text-decoration: none;
-    font-size: 22px;
+    font-size: clamp(17px,2vw,22px);
     color: white;
 }
+nav a:hover{
+    color: rgb(243, 40, 40);
+}
 
+
+ .page-wrap{
+        position: relative;
+        padding-bottom: 10px;
+ }
 
 .pages{
     top: 100%;
@@ -36,8 +47,9 @@ nav a{
     flex-direction: column;
     gap: 20px;
     background: red;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 20px 0px;
+    border-radius: 5px;
+    padding-left: 20px ;
     width: 200px;
 }
 
@@ -45,13 +57,7 @@ nav a{
         color: black;
 }
 
-.toggle{
-    display: none;
-}
 
-.close{
-    display: none;
-}
 
  .page-wrap .fa-angle-down{
     color: red;
@@ -64,18 +70,15 @@ nav a{
  }
 
 
- .page-wrap{
-        position: relative;
-        padding-bottom: 10px;
- }
-
  .pages a:hover{
     color: rgb(255, 255, 255);
 
  }
 
+
+
  .contactbox{
-    display: flex;
+   
     position: relative;
     padding-right: 40px;
  }
@@ -89,10 +92,116 @@ nav a{
     gap: 20px;
     background: red;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 200px;
  }
 
  .contactbox:hover .contactlink{
     display: flex;
  }
+
+
+ .toggle{
+    display: none;
+}
+
+.close{
+    display: none;
+}
+
+@media (max-width:1050px) {
+
+    #header{
+        justify-content: space-between;
+          padding: 10px 20px;
+    }
+
+    nav{
+        display: flex;
+         position: absolute;
+         flex-direction: column;
+         color: black;
+         top: 0;
+         left: 0;
+         padding: 20px 50px;
+         background: yellowgreen;
+         width: 75%;
+         height: 100vh;
+    }
+        nav a{
+         color: black;    
+    }
+
+    .toggle{
+        display: flex;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .page-wrap>a:first-child{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0px
+    }
+
+    .page-wrap>a:first-child .arrowdown1{
+        background: black;
+        padding: 2px;
+    }
+
+     .page-wrap:hover .pages{
+    display: none;
+ }
+
+
+    /*  */
+
+    .page-wrap{
+        position: relative;
+        padding-bottom: 3px;
+    
+    }
+
+.pages{
+    padding-left: 20px;
+    position: static;
+    display: none;
+    background: red;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+
+ .contactbox{
+    padding-right: 0px;
+ }
+
+
+
+ .contactlink{
+    position: static;
+    display: none;
+    background: blue;
+    padding-left: 30px;
+    border-radius: 5px;
+    width: 100%;
+ }
+
+  .contactbox:hover .contactlink{
+    display: none;
+ }
+
+ .contactbox a:first-child .arrowdown2{
+        background: black;
+        padding: 2px;
+ }
+
+ .contactbox a:first-child{
+     display: flex;
+        justify-content: space-between;
+ }
+
+
+    
+}
