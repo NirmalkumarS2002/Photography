@@ -1,0 +1,98 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.493);
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    gap: 50px;
+ 
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+}
+
+
+.pages{
+    top: 100%;
+    left: 0;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    background: red;
+    padding: 30px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.pages a{
+        color: black;
+}
+
+.toggle{
+    display: none;
+}
+
+.close{
+    display: none;
+}
+
+ .page-wrap .fa-angle-down{
+    color: red;
+
+
+ }
+
+ .page-wrap:hover .pages{
+    display: flex;
+ }
+
+
+ .page-wrap{
+        position: relative;
+        padding-bottom: 10px;
+ }
+
+ .pages a:hover{
+    color: rgb(255, 255, 255);
+
+ }
+
+ .contactbox{
+    display: flex;
+    position: relative;
+    padding-right: 40px;
+ }
+
+ .contactlink{
+     left: 100%;
+     top: 0;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    background: red;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+ }
+
+ .contactbox:hover .contactlink{
+    display: flex;
+ }
